@@ -1,9 +1,9 @@
-const arr = [23, 44, 12];
+require("@babel/polyfill");
+import axios from "axios";
+import Search from "../../dist/js/modal/Search";
 
-let myfunc = a => {
-  console.log(`too : ${a}`);
-};
 
-const arr2 = [...arr, 44, 1223];
+let search = new Search('pasta')
+let r
+search.doSearch().then(r = console.log('r >> ', r))
 
-myfunc(arr2[1]);
